@@ -1,0 +1,205 @@
+@import "../styles/home/home.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "../styles/portfolio/portfolio.css";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a23;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Global star background effect */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: white;
+    top: 50%;
+    left: 50%;
+    box-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.8),
+        -50vw -20vh 1px rgba(255, 255, 255, 0.9),
+        -40vw -40vh 2px rgba(255, 255, 255, 0.7),
+        -30vw -10vh 1px rgba(255, 255, 255, 0.8),
+        -20vw -30vh 2px rgba(255, 255, 255, 0.9),
+        -10vw -25vh 1px rgba(255, 255, 255, 0.7),
+        10vw -15vh 1px rgba(255, 255, 255, 0.8),
+        20vw -35vh 2px rgba(255, 255, 255, 0.9),
+        30vw -45vh 2px rgba(255, 255, 255, 0.7),
+        40vw -5vh 1px rgba(255, 255, 255, 0.8),
+        50vw -25vh 1px rgba(255, 255, 255, 0.9),
+        -50vw 20vh 2px rgba(255, 255, 255, 0.7),
+        -40vw 40vh 1px rgba(255, 255, 255, 0.8),
+        -30vw 10vh 2px rgba(255, 255, 255, 0.9),
+        -20vw 30vh 1px rgba(255, 255, 255, 0.7),
+        -10vw 25vh 2px rgba(255, 255, 255, 0.8),
+        10vw 15vh 1px rgba(255, 255, 255, 0.9),
+        20vw 35vh 2px rgba(255, 255, 255, 0.7),
+        30vw 45vh 1px rgba(255, 255, 255, 0.8),
+        40vw 5vh 2px rgba(255, 255, 255, 0.9),
+        50vw 25vh 1px rgba(255, 255, 255, 0.7),
+        -45vw -15vh 1px rgba(255, 255, 255, 0.8),
+        -35vw -35vh 2px rgba(255, 255, 255, 0.9),
+        -25vw -5vh 1px rgba(255, 255, 255, 0.7),
+        -15vw -25vh 2px rgba(255, 255, 255, 0.8),
+        -5vw -20vh 1px rgba(255, 255, 255, 0.9),
+        5vw -10vh 2px rgba(255, 255, 255, 0.7),
+        15vw -30vh 1px rgba(255, 255, 255, 0.8),
+        25vw -40vh 2px rgba(255, 255, 255, 0.9),
+        35vw 0vh 1px rgba(255, 255, 255, 0.7),
+        45vw -20vh 2px rgba(255, 255, 255, 0.8);
+    animation: twinkle 8s ease-in-out infinite alternate;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body::after {
+    animation-delay: -4s;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.3;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        opacity: 0.3;
+        transform: scale(0.5);
+    }
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.about-container,
+.floating-header,
+.section {
+    position: relative;
+    z-index: 1;
+}
+
+.floating-header {
+    text-align: center;
+    background: rgba(10, 10, 35, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.floating-header h1 {
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.floating-header p {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+.highlight:nth-child(1) {
+    color: #512bd4; /* Official .NET purple */
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(81, 43, 212, 0.5);
+}
+
+.highlight:nth-child(2) {
+    color: #42b883; /* Vue.js green */
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(66, 184, 131, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .floating-header {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .floating-header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .floating-header {
+        padding: 1.2rem 1.8rem;
+    }
+    
+    .floating-header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .floating-header p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .floating-header {
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .floating-header h1 {
+        font-size: 1.4rem;
+    }
+    
+    .floating-header p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .floating-header {
+        padding: 0.8rem 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .floating-header h1 {
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .floating-header p {
+        font-size: 0.9rem;
+    }
+}
