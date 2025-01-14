@@ -1,7 +1,6 @@
 const pages = {
     home: './components/home.html',
-    portfolio: './components/portfolio.html',
-    contact: './components/contact.html'
+    portfolio: './components/portfolio.html'
 };
 
 async function router() {

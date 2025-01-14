@@ -1,0 +1,167 @@
+@media (max-width: 1400px) {
+    .about-container {
+        max-width: 1140px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-container {
+        max-width: 960px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+    
+    .about-image {
+        flex: 0 0 200px;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-container {
+        max-width: 720px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-image {
+        margin-bottom: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        max-width: 540px;
+        padding: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .floating-header {
+        padding: 1rem;
+    }
+
+    .floating-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .floating-header p {
+        font-size: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .project-info p {
+        font-size: 1rem;
+    }
+
+    .tech-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .project-link {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        min-width: 140px;
+    }
+    
+    .contact-info {
+        justify-content: center;
+    }
+
+    .certificates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-method {
+        min-width: 100%;
+    }
+
+    .modal-content {
+        margin: 1rem;
+    }
+
+    .recommendation-card {
+        padding: 1.5rem;
+    }
+
+    .recommender-details h3 {
+        font-size: 1.5rem;
+    }
+
+    .recommender-title {
+        font-size: 1rem;
+    }
+
+    .recommendation-text {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .download-pdf {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-container {
+        max-width: 100%;
+        padding: 0.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .about-text {
+        font-size: 1rem;
+    }
+    
+    .skill-category {
+        padding: 1rem;
+    }
+    
+    .timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .project-info {
+        padding: 1rem;
+    }
+    
+    .project-info h3 {
+        font-size: 1.3rem;
+    }
+}

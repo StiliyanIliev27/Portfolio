@@ -1,0 +1,138 @@
+.recommendations-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.recommendations-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.recommendation-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 25px;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(81, 43, 212, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+.recommendation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at top right,
+        rgba(81, 43, 212, 0.1),
+        transparent 70%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.recommendation-card:hover::before {
+    opacity: 1;
+}
+
+.recommender-info {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(81, 43, 212, 0.2);
+    position: relative;
+}
+
+.recommender-info::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent,
+        rgba(81, 43, 212, 0.5),
+        transparent
+    );
+}
+
+.recommender-details h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(45deg, #fff, #512bd4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.recommender-title {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+}
+
+.recommendation-content {
+    position: relative;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 15px;
+}
+
+.recommendation-text {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    white-space: pre-line;
+    text-align: justify;
+    font-style: italic;
+    position: relative;
+}
+
+.recommendation-text::before,
+.recommendation-text::after {
+    content: '"';
+    font-size: 3rem;
+    color: rgba(81, 43, 212, 0.3);
+    position: absolute;
+}
+
+.recommendation-text::before {
+    top: -1rem;
+    left: -1rem;
+}
+
+.recommendation-text::after {
+    bottom: -2rem;
+    right: -1rem;
+}
+
+.download-pdf {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #512bd4, #8b5cf6);
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.download-pdf:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(81, 43, 212, 0.3);
+}
+
+.download-pdf i {
+    font-size: 1.2rem;
+}
