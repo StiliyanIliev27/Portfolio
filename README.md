@@ -1,4 +1,4 @@
-# 🌟 Personal Portfolio  
+# 🌟 Personal Portfolio
 
 A responsive web application designed to showcase my skills, projects, and professional journey as a developer. Built with modern technologies, this portfolio emphasizes clean design, interactivity, and an intuitive user experience.  
 
